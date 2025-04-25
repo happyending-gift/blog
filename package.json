@@ -1,0 +1,41 @@
+{
+  "name": "comet-doc",
+  "description": "code library",
+  "version": "0.0.1",
+  "license": "MIT",
+  "type": "module",
+  "author": "passwordgloo",
+  "homepage": "https://blog.csdn.net/passwordgloo",
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/passwordgloo/vuepress2-tutorial"
+  },
+  "keywords": [
+    "彗星文档",
+    "comet docs"
+  ],
+  "scripts": {
+    "docs:build": "vuepress build docs",
+    "docs:clean-dev": "vuepress dev docs --clean-cache",
+    "docs:dev": "vuepress dev docs",
+    "docs:update-package": "pnpm dlx vp-update",
+    "commit": "git add . && czg emoji",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 2"
+  },
+  "devDependencies": {
+    "@vuepress/bundler-vite": "2.0.0-rc.20",
+    "@vuepress/plugin-blog": "2.0.0-rc.86",
+    "@vuepress/plugin-slimsearch": "2.0.0-rc.94",
+    "@vuepress/theme-default": "2.0.0-rc.88",
+    "conventional-changelog-cli": "^5.0.0",
+    "czg": "^1.11.1",
+    "sass-embedded": "^1.86.0",
+    "vue": "^3.5.13",
+    "vuepress": "2.0.0-rc.20"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.4",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.4"
+  }
+}
