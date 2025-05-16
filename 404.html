@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.20" />
+    <style>
+      :root {
+        --vp-c-bg: #fff;
+      }
+
+      [data-theme='dark'] {
+        --vp-c-bg: #1b1b1f;
+      }
+
+      html,
+      body {
+        background-color: var(--vp-c-bg);
+      }
+    </style>
+    <script>
+      const useChoice = localStorage.getItem('vuepress-color-scheme')
+      const systemStatus =
+        'matchMedia' in window
+          ? window.matchMedia('(prefers-color-scheme: dark)').matches
+          : false
+
+      if (useChoice === 'light') {
+        document.documentElement.dataset.theme = 'light'
+      } else if (useChoice === 'dark' || systemStatus) {
+        document.documentElement.dataset.theme = 'dark'
+      }
+    </script>
+    <link rel="icon" href="/favicon.ico"><title>小陈文档</title><meta name="description" content="繁星似海 熠熠生辉">
+    <link rel="preload" href="/assets/style-DaLXpc7i.css" as="style"><link rel="stylesheet" href="/assets/style-DaLXpc7i.css">
+    <link rel="modulepreload" href="/assets/app-CRCfSk5D.js"><link rel="modulepreload" href="/assets/404.html-Dpx6N4CV.js">
+    <link rel="prefetch" href="/assets/index.html-d8nfFsLA.js" as="script"><link rel="prefetch" href="/assets/about.html-Cxz6Mt6F.js" as="script"><link rel="prefetch" href="/assets/index.html-9dTTEEjN.js" as="script"><link rel="prefetch" href="/assets/about.html-Gu_OcfIl.js" as="script"><link rel="prefetch" href="/assets/index.html-CxgbHjT4.js" as="script"><link rel="prefetch" href="/assets/dataType.html-B2Yv1NCI.js" as="script"><link rel="prefetch" href="/assets/operator.html-F82LoBVf.js" as="script"><link rel="prefetch" href="/assets/sentence.html-ff4obod9.js" as="script"><link rel="prefetch" href="/assets/var.html-BHC4vfeg.js" as="script"><link rel="prefetch" href="/assets/index.html-CDmFEYdH.js" as="script"><link rel="prefetch" href="/assets/index.html-BGsMDuPU.js" as="script"><link rel="prefetch" href="/assets/index.html-CaaGRTmQ.js" as="script"><link rel="prefetch" href="/assets/index.html-D4g_bofc.js" as="script"><link rel="prefetch" href="/assets/index.html-CuEWizZq.js" as="script"><link rel="prefetch" href="/assets/index.html-o-8e4P-B.js" as="script"><link rel="prefetch" href="/assets/index.html-DvdHbxmt.js" as="script"><link rel="prefetch" href="/assets/index.html-CUlQKkiO.js" as="script"><link rel="prefetch" href="/assets/index.html-Bd2UkZF3.js" as="script"><link rel="prefetch" href="/assets/index.html-BZjYi2ed.js" as="script"><link rel="prefetch" href="/assets/index.html-CK_wj4j-.js" as="script"><link rel="prefetch" href="/assets/index.html-DUSQez0L.js" as="script"><link rel="prefetch" href="/assets/SearchResult-C4FMeDOM.js" as="script">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="vp-theme-container" vp-container data-v-5b9ca89e><main class="page" data-v-5b9ca89e><div vp-content data-v-5b9ca89e><h1 data-v-5b9ca89e>404</h1><blockquote data-v-5b9ca89e>网页走丢了</blockquote><a class="route-link" href="/" data-v-5b9ca89e>返回首页</a></div></main></div><!--[--><!----><!----><!--]--><!--]--></div>
+    <script type="module" src="/assets/app-CRCfSk5D.js" defer></script>
+  </body>
+</html>
