@@ -32,9 +32,9 @@ layout: Banner
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=110 src="//music.163.com/outchain/player?type=0&id=7113076622&auto=1&height=90"></iframe>
 
-## 教程使用
 
-访问[蓝奏云](https://wwk.lanzouo.com/b04x8f3hg),密码666
+
+
 
 ## 项目用途
 
@@ -46,4 +46,4 @@ layout: Banner
 
 - [Github](https://github.com/passwordgloo)
 - [Gmail](mailto:flyigloo@gmail.com)
-- [163邮箱](mailto:passwordgloo@163.com)
+- [163邮箱](mailto:13217958672@163.com)

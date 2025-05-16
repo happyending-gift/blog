@@ -6,26 +6,26 @@ export const zhSidebar = {
             // collapsible: true,
             children: [
                 {
-                    text:'变量',
-                    link:'var'
+                    text: '变量',
+                    link: 'var'
                 },
                 {
-                    text:'运算符',
-                    link:'operator'
+                    text: '运算符',
+                    link: 'operator'
                 },
                 {
-                    text:'数据类型',
-                    link:'dataType'
+                    text: '数据类型',
+                    link: 'dataType'
                 },
                 {
-                    text:'表达式与语句',
-                    link:'sentence'
+                    text: '表达式与语句',
+                    link: 'sentence'
                 },
-                ],
+            ],
         }
     ],
 }
 
 export const enSidebar = {
-    
+
 }

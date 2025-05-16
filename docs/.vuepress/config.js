@@ -14,12 +14,12 @@ export default defineUserConfig({
   locales: {
     '/': {
       selectLanguageName: '简体中文',
-      title: '彗星文档',
+      title: '小陈文档',
       description: '繁星似海 熠熠生辉',
     },
     '/en/': {
       selectLanguageName: 'English',
-      title: 'Comet documents',
+      title: 'xiaochen documents',
       description: 'The stars are like a sea, shining brightly.',
     },
   },
@@ -52,7 +52,7 @@ export default defineUserConfig({
     slimsearchPlugin({
       // 已启用全文搜索
       indexContent: true,
-      suggestion:true
+      suggestion: true
     }),
 
     // 需要安装@vuepress/plugin-slimsearch
@@ -61,7 +61,7 @@ export default defineUserConfig({
     //   apiKey: '<YOUR_SEARCH_KEY>',
     //   indexUid: '<YOUR_INDEX_NAME>',
     // }),
-    
+
     blogPlugin({
       // Only files under posts are articles
       // filter: ({ filePathRelative }) =>

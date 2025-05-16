@@ -4,14 +4,14 @@
   "version": "0.0.1",
   "license": "MIT",
   "type": "module",
-  "author": "passwordgloo",
+  "author": "chengp",
   "homepage": "https://blog.csdn.net/passwordgloo",
   "repository": {
     "type": "git",
-    "url": "https://gitee.com/passwordgloo/vuepress2-tutorial"
+    "url": "https://github.com/idno77/chengp.github.io.git"
   },
   "keywords": [
-    "彗星文档",
+    "小陈文档",
     "comet docs"
   ],
   "scripts": {

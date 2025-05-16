@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /comet.png
-heroText: Comet Documents
+heroText: xiaochen Documents
 tagline: The stars are like a sea, shining brightly.
 actions:
   - text: Blog
