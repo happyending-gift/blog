@@ -10,6 +10,8 @@ import tailwindcss from '@tailwindcss/postcss'
 export default defineUserConfig({
   head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
 
+  base: "/blog/",
+
   lang: 'zh-CN',
   locales: {
     '/': {
