@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /comet.png
-heroText: 小陈文库
+heroText: 小陈文档
 tagline: 繁星似海 熠熠生辉
 actions:
   - text: 基础思考
