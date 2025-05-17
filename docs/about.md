@@ -45,5 +45,5 @@ layout: Banner
 ## 联系信息
 
 - [Github](https://github.com/passwordgloo)
-- [Gmail](mailto:flyigloo@gmail.com)
+- [qqmail](mailto:1787536379@qq.com)
 - [163邮箱](mailto:13217958672@163.com)
