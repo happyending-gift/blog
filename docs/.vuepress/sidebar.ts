@@ -6,6 +6,10 @@ export const zhSidebar = {
             // collapsible: true,
             children: [
                 {
+                    text: '多线程',
+                    link: 'JUC'
+                },
+                {
                     text: '变量',
                     link: 'var'
                 },
@@ -31,10 +35,6 @@ export const zhSidebar = {
             //可折叠侧边栏
             // collapsible: true,
             children: [
-                {
-                    text: '多线程',
-                    link: 'JUC'
-                },
                 {
                     text: '变量',
                     link: 'var'
