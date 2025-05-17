@@ -11,10 +11,47 @@ public static ExecutorService newFixedThreadPool(int nThreads) {
 }
 ```
 
-::: tip
+
 核心线程数与最大线程数一样：没有救急线程。
 阻塞队列是 LinkedBlockingQueue：最大容量为 Integer.MAX_VALUE。
-:::
+
+
+### 单线程化的线程池
+
+```java
+public static ExecutorService newSingleThreadExecutor() {
+    return new FinalizableDelegatedExecutorService(
+        new ThreadPoolExecutor(1, 1,
+            0L, TimeUnit.MILLISECONDS,
+            new LinkedBlockingQueue<Runnable>()));
+}
+```
+
+
+核心线程数和最大线程数都是 1。
+阻塞队列是 LinkedBlockingQueue，最大容量为 Integer.MAX_VALUE。
+
+
+### 可缓存线程池
+
+```java
+public static ExecutorService newCachedThreadPool() {
+    return new ThreadPoolExecutor(0, Integer.MAX_VALUE,
+        60L, TimeUnit.SECONDS,
+        new SynchronousQueue<Runnable>());
+}
+```
+
+核心线程数为 0：线程池不会保留核心线程。
+最大线程数是 Integer.MAX_VALUE：理论上可以创建无限多的线程。
+阻塞队列为 SynchronousQueue：不存储元素的阻塞队列，每个插入操作都必须等待一个移出操作。
+
+
+### 定时线程池
+
+核心线程自己定，最大线程MAX
+
+
 
 
 ## ThreadLocalMap的引用类型
