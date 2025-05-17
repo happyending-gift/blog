@@ -13,6 +13,7 @@ public static ExecutorService newFixedThreadPool(int nThreads) {
 
 
 核心线程数与最大线程数一样：没有救急线程。
+
 阻塞队列是 LinkedBlockingQueue：最大容量为 Integer.MAX_VALUE。
 
 
@@ -29,6 +30,7 @@ public static ExecutorService newSingleThreadExecutor() {
 
 
 核心线程数和最大线程数都是 1。
+
 阻塞队列是 LinkedBlockingQueue，最大容量为 Integer.MAX_VALUE。
 
 
@@ -43,7 +45,9 @@ public static ExecutorService newCachedThreadPool() {
 ```
 
 核心线程数为 0：线程池不会保留核心线程。
+
 最大线程数是 Integer.MAX_VALUE：理论上可以创建无限多的线程。
+
 阻塞队列为 SynchronousQueue：不存储元素的阻塞队列，每个插入操作都必须等待一个移出操作。
 
 
