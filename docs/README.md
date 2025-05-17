@@ -15,6 +15,8 @@ actions:
     link: about.md
     type: success
 
+footer: MIT Licensed | Copyright © 2025-present chengp
+---
 
 # 关于
 
@@ -31,7 +33,3 @@ actions:
     </span>
   </button>
 </div>
-
-
-footer: MIT Licensed | Copyright © 2025-present chengp
----
