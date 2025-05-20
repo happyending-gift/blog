@@ -242,27 +242,15 @@ threadlocal中set的值，同时只能存在一个，后面set的值，会把前
 1. 数据扩容机制
 
    FastThreadLocal：
- 
    扩容时将原数据拷贝到新数组。
- 
    扩容过程简单高效。
- 
    ThreadLocal：
- 
    使用哈希表存储数据。
- 
    扩容后需要重新哈希（rehash），效率较低。
- 
 2.  安全性
-
-   ThreadLocal：
-
+    ThreadLocal：
     使用不当可能导致内存泄漏。
-
     在线程池场景下，只能通过主动检测来防止内存泄漏，增加了开销。
-
     FastThreadLocal：
-
     提供了 remove() 方法，允许主动清除对象。
-
     在任务执行完成后会自动触发清除机制，减少了内存泄漏的风险。
