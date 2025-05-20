@@ -118,6 +118,40 @@ CPU密集型任务
 - **特点**：ScheduledThreadPoolExecutor 常见的例子，例如使用一个 DelayedWorkQueue 来管理一个超时未响应的连接队列。
 - **线程安全**：内部使用 ReentrantLock 加锁。
 
+
+::: wrong LinkedBlockingQueue 和 ArrayBlockingQueue 的区别
+容量：
+
+LinkedBlockingQueue 默认无界，支持有界。
+
+ArrayBlockingQueue 强制有界。
+
+底层数据结构：
+
+LinkedBlockingQueue 底层是链表。
+
+ArrayBlockingQueue 底层是数组。
+
+内存管理：
+
+LinkedBlockingQueue 是懒惰的，创建节点的时候添加数据。
+
+ArrayBlockingQueue 需要提前初始化 Node 数组。
+
+入队操作：
+
+LinkedBlockingQueue 入队会生成新 Node。
+
+ArrayBlockingQueue Node 需要是提前创建好的。
+
+锁机制：
+
+LinkedBlockingQueue 使用两把锁（头尾）。
+
+ArrayBlockingQueue 使用一把锁。
+:::
+
+
 ## 拒绝策略
 
 1. **AbortPolicy**：
@@ -132,7 +166,15 @@ CPU密集型任务
 4. **DiscardPolicy**：
    - 直接丢弃任务。
 
+## Java 线程池怎么实现线程自动回收？
 
+线程池通过 worker 线程循环获取任务。
+
+超时判断在 getTask() 中完成，超时后触发线程回收。
+
+回收流程由 processWorkerExit() 方法完成，包括任务统计、移除线程和判断是否补充线程。
+
+线程回收和补充机制确保线程池的动态调整和资源优化。
 ## ThreadLocalMap的引用类型
 
 ::: tip answer
@@ -151,6 +193,17 @@ ThreadLocalMap 的 key 是弱引用，而 value 是强引用。
   如果值是弱引用，那么在没有其他强引用指向这个值的情况下，值可能会在任何时候被垃圾回收器回收。这将导致 ThreadLocal 无法正确地存储和检索数据，因为它们可能会在不被期望的情况下突然消失。
     
   强引用保证数据完整性：使用强引用作为 ThreadLocalMap的值确保了只要ThreadLocal对象存在，其关联的数据值也会一直存在，直到显式地通过remove()方法或线程结束时清理。这样可以保证数据的完整性和一致性，避免因垃圾回收导致的潜在错误。
+
+
+
+
+::: danger 
+threadlocal中set的值，同时只能存在一个，后面set的值，会把前面的给覆盖了
+
+两个不同的ThreadLocal 在map中位置发生冲突会使用开放寻址法。
+:::
+
+
 
 
 ::: tip Java中的引用类型
@@ -177,3 +230,39 @@ InheritableThreadLocal在子线程创建时从父线程拷贝值。具体来说�
 
 在使用InheritableThreadLocal 时，需要特别注意线程池的使用场景，确保不会因线程重用而导致数据不一致的问题。通常建议在任务执行完毕后清除InheritableThreadLocal的值，以避免潜在的数据泄露风险。
 
+
+::: wrong
+threadlocal中set的值，同时只能存在一个，后面set的值，会把前面的给覆盖了
+
+两个不同的ThreadLocal 在map中位置发生冲突会使用开放寻址法。
+:::
+
+
+## ThreadLocal改进的框架或者工具
+1. 数据扩容机制
+
+   FastThreadLocal：
+ 
+   扩容时将原数据拷贝到新数组。
+ 
+   扩容过程简单高效。
+ 
+   ThreadLocal：
+ 
+   使用哈希表存储数据。
+ 
+   扩容后需要重新哈希（rehash），效率较低。
+ 
+2.  安全性
+
+   ThreadLocal：
+
+    使用不当可能导致内存泄漏。
+
+    在线程池场景下，只能通过主动检测来防止内存泄漏，增加了开销。
+
+    FastThreadLocal：
+
+    提供了 remove() 方法，允许主动清除对象。
+
+    在任务执行完成后会自动触发清除机制，减少了内存泄漏的风险。
