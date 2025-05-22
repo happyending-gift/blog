@@ -197,10 +197,11 @@ ThreadLocalMap 的 key 是弱引用，而 value 是强引用。
 
 
 
-::: danger 
+::: 
 threadlocal中set的值，同时只能存在一个，后面set的值，会把前面的给覆盖了
 
 两个不同的ThreadLocal 在map中位置发生冲突会使用开放寻址法。
+
 :::
 
 
