@@ -10,7 +10,7 @@ export const zhSidebar = {
                     link: 'JUC'
                 },
                 {
-                    text: 'Spring',
+                    text: 'Spring1',
                     link: 'Spring'
                 },
                 {
