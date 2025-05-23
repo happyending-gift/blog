@@ -10,8 +10,8 @@ export const zhSidebar = {
                     link: 'JUC'
                 },
                 {
-                    text: 'spring',
-                    link: 'spring'
+                    text: '四普润',
+                    link: 's_pring'
                 },
                 {
                     text: '小提示',
