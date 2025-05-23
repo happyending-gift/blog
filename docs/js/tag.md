@@ -14,3 +14,9 @@ title: 小提示
 node：用于运行 JavaScript 代码，是 Node.js 的执行环境。
 
 npm：用于管理 Node.js 项目的依赖和包，是 Node.js 的包管理器。
+
+::: tip
+
+Hykari对sharingspares比druid更适配
+
+:::
