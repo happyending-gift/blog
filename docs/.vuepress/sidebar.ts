@@ -10,7 +10,7 @@ export const zhSidebar = {
                     link: 'JUC'
                 },
                 {
-                    text: 'Spring1',
+                    text: 'Spring',
                     link: 'Spring'
                 },
                 {
@@ -33,10 +33,7 @@ export const zhSidebar = {
                     text: '数据类型',
                     link: 'dataType'
                 },
-                {
-                    text: '表达式与语句',
-                    link: 'sentence'
-                },
+
             ],
         }
     ],
