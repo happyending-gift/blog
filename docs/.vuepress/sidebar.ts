@@ -14,6 +14,10 @@ export const zhSidebar = {
                     link: 'tag'
                 },
                 {
+                    text: '虚拟机',
+                    link: 'JVM'
+                },
+                {
                     text: '变量',
                     link: 'var'
                 },
