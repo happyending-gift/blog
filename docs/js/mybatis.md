@@ -187,15 +187,15 @@ ResultMap
 - **作用**：当返回的结果集与实体类的字段不完全对应时，可以使用 ResultMap 来定义字段与实体类属性之间的映射关系。
 
 ```xml
-<resultMap id="UserResultMap" type="com.example.model.User">
+ <resultMap id="UserResultMap" type="com.example.model.User">
   <result property="id" column="user_id"/>
   <result property="name" column="username"/>
   <result property="email" column="user_email"/>
-</resultMap>
+ </resultMap>
 
-<select id="selectUser" resultMap="UserResultMap">
+ <select id="selectUser" resultMap="UserResultMap">
   SELECT user_id AS id, username AS name, user_email AS email FROM users WHERE id = #{id}
-</select>
+ </select>
 ```
 
 ## MyBatis 一级缓存与二级缓存
@@ -204,14 +204,14 @@ MyBatis 提供了两级缓存机制：一级缓存和二级缓存，以提高数
 
 ### 一级缓存（Session 缓存）
 
-一级缓存是 `SqlSession` 级别的缓存，它是本地缓存，也是 MyBatis 中的默认缓存。
+一级缓存是SqlSession级别的缓存，它是本地缓存，也是 MyBatis 中的默认缓存。
 
 特点：
 
-- 每个 `SqlSession` 都有自己的一级缓存。
+- 每个 SqlSession 都有自己的一级缓存。
 - 当执行查询操作时，MyBatis 会先在一级缓存中查找结果，如果命中缓存，则直接返回缓存中的数据。
 - 一级缓存是强制性的，不能关闭。
-- 一级缓存的范围限定在 `SqlSession` 的生命周期内，当 `SqlSession` 关闭后，缓存也就失效了。
+- 一级缓存的范围限定在 SqlSession 的生命周期内，当 SqlSession 关闭后，缓存也就失效了。
 
 ###二级缓存（Mapper 缓存）
 
