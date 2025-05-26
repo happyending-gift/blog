@@ -42,8 +42,11 @@ export const zhNavbar = [
             ]
     },
     {
-        text: '分类',
-        link: '/category/',
+        text: '学习文档',
+        children:
+            [
+                { text: 'Go', link: 'https://www.topgoer.com/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/GMP%E5%8E%9F%E7%90%86%E4%B8%8E%E8%B0%83%E5%BA%A6.html' },
+            ]
     },
     {
         text: '归档',
