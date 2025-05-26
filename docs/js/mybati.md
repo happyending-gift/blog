@@ -24,32 +24,51 @@ RowBounds 是 MyBatis 提供的一个对象，用于在内存中实现分页。�
 ## mybatis实体属性与数据库属性名不同
 
 1、在sql语句中通过别名的方式
-```javascript
-<select id="selectUser" resultType="User">
-  SELECT id AS "userId", name AS "userName", email AS "userEmail"
-  FROM users
-</select>
-```
-2、在xml文件中通过映射字段名与实体属性名一一对应
-```javascript
-<resultMap id="UserResultMap" type="User">
-  <result property="userId" column="id"/>
-  <result property="userName" column="name"/>
-  <result property="userEmail" column="email"/>
-</resultMap>
 
-<select id="selectUser" resultMap="UserResultMap">
-  SELECT id, name, email FROM users
-</select>
-```
+[comment]: <> (```javascript)
+
+[comment]: <> (<select id="selectUser" resultType="User">)
+
+[comment]: <> (  SELECT id AS "userId", name AS "userName", email AS "userEmail")
+
+[comment]: <> (  FROM users)
+
+[comment]: <> (</select>)
+
+[comment]: <> (```)
+2、在xml文件中通过映射字段名与实体属性名一一对应
+
+[comment]: <> (```javascript)
+
+[comment]: <> (<resultMap id="UserResultMap" type="User">)
+
+[comment]: <> (  <result property="userId" column="id"/>)
+
+[comment]: <> (  <result property="userName" column="name"/>)
+
+[comment]: <> (  <result property="userEmail" column="email"/>)
+
+[comment]: <> (</resultMap>)
+
+[comment]: <> (<select id="selectUser" resultMap="UserResultMap">)
+
+[comment]: <> (  SELECT id, name, email FROM users)
+
+[comment]: <> (</select>)
+
+[comment]: <> (```)
 
 ::: tip 获取自增主键
 
-```javascript
-<insert id="insertUser" useGeneratedKeys="true" keyProperty="userId">
-INSERT INTO users (name, email) VALUES (#{name}, #{email})
-</insert>
-```
+[comment]: <> (```javascript)
+
+[comment]: <> (<insert id="insertUser" useGeneratedKeys="true" keyProperty="userId">)
+
+[comment]: <> (INSERT INTO users &#40;name, email&#41; VALUES &#40;#{name}, #{email}&#41;)
+
+[comment]: <> (</insert>)
+
+[comment]: <> (```)
 :::
 
 ## MyBatis Mapper 传参方法
@@ -62,32 +81,49 @@ INSERT INTO users (name, email) VALUES (#{name}, #{email})
 
 ::: tip 
 
-```javascript
-<select id="selectUserById" parameterType="int" resultType="User">
-  SELECT * FROM users WHERE id = #{id}
-</select>
-```
+[comment]: <> (```javascript)
+
+[comment]: <> (<select id="selectUserById" parameterType="int" resultType="User">)
+
+[comment]: <> (  SELECT * FROM users WHERE id = #{id})
+
+[comment]: <> (</select>)
+
+[comment]: <> (```)
 :::
 ### 2.使用 @Param注解
 
-```java
-public interface UserMapper {
-User selectUserByNameAndEmail(@Param("name") String name, @Param("email") String email);
-}
-```
+[comment]: <> (```java)
+
+[comment]: <> (public interface UserMapper {)
+
+[comment]: <> (User selectUserByNameAndEmail&#40;@Param&#40;"name"&#41; String name, @Param&#40;"email"&#41; String email&#41;;)
+
+[comment]: <> (})
+
+[comment]: <> (```)
 
 ### 3.使用 Map装载
 
-```java
- public interface UserMapper {
-     User selectUserByParams(Map<String, Object> params);
- }
-```
-```javascript
-<select id="selectUserByParams" parameterType="map" resultType="User">
-    SELECT * FROM users WHERE name = #{name} AND email = #{email}
-</select>
-```
+[comment]: <> (```java)
+
+[comment]: <> ( public interface UserMapper {)
+
+[comment]: <> (     User selectUserByParams&#40;Map<String, Object> params&#41;;)
+
+[comment]: <> ( })
+
+[comment]: <> (```)
+
+[comment]: <> (```javascript)
+
+[comment]: <> (<select id="selectUserByParams" parameterType="map" resultType="User">)
+
+[comment]: <> (    SELECT * FROM users WHERE name = #{name} AND email = #{email})
+
+[comment]: <> (</select>)
+
+[comment]: <> (```)
 
 ## MyBatis 动态 SQL
 
@@ -105,22 +141,37 @@ MyBatis 支持多种动态 SQL 标签，以下是一些常用的标签：
 
 使用 <if> 标签
 
-```javascript
-<select id="selectUsers" resultType="User">
-  SELECT * FROM users
-  <where>
-    <if test="id != null">
-      id = #{id}
-    </if>
-    <if test="name != null">
-      AND name = #{name}
-    </if>
-    <if test="email != null">
-      AND email = #{email}
-    </if>
-  </where>
-</select>
-```
+[comment]: <> (```javascript)
+
+[comment]: <> (<select id="selectUsers" resultType="User">)
+
+[comment]: <> (  SELECT * FROM users)
+
+[comment]: <> (  <where>)
+
+[comment]: <> (    <if test="id != null">)
+
+[comment]: <> (      id = #{id})
+
+[comment]: <> (    </if>)
+
+[comment]: <> (    <if test="name != null">)
+
+[comment]: <> (      AND name = #{name})
+
+[comment]: <> (    </if>)
+
+[comment]: <> (    <if test="email != null">)
+
+[comment]: <> (      AND email = #{email})
+
+[comment]: <> (    </if>)
+
+[comment]: <> (  </where>)
+
+[comment]: <> (</select>)
+
+[comment]: <> (```)
 
 ::: tip 不同xml文件,id可以重复吗
 MyBatis 中，不同 XML 文件中的 ID **可以重复**，
@@ -128,13 +179,19 @@ MyBatis 中，不同 XML 文件中的 ID **可以重复**，
 这是因为 MyBatis 使用命名空间和 ID 的组合来唯一标识每个语句。
 :::
 
-```javascript
-<mapper namespace="com.example.mapper.UserMapper">
-  <select id="selectUser" parameterType="int" resultType="com.example.model.User">
-    SELECT * FROM users WHERE id = #{id}
-  </select>
-</mapper>
-```
+[comment]: <> (```javascript)
+
+[comment]: <> (<mapper namespace="com.example.mapper.UserMapper">)
+
+[comment]: <> (  <select id="selectUser" parameterType="int" resultType="com.example.model.User">)
+
+[comment]: <> (    SELECT * FROM users WHERE id = #{id})
+
+[comment]: <> (  </select>)
+
+[comment]: <> (</mapper>)
+
+[comment]: <> (```)
 
 ## mybatis分页
 
@@ -177,27 +234,39 @@ ResultType
 - **作用**：指定返回结果的类型，通常是实体类的全限定名。
 - **示例**：
 
-```javascript
-  <select id="selectUser" resultType="com.example.model.User">
-    SELECT * FROM users WHERE id = #{id}
-  </select>
-```
+[comment]: <> (```javascript)
+
+[comment]: <> (  <select id="selectUser" resultType="com.example.model.User">)
+
+[comment]: <> (    SELECT * FROM users WHERE id = #{id})
+
+[comment]: <> (  </select>)
+
+[comment]: <> (```)
 
 ResultMap
 
 - **作用**：当返回的结果集与实体类的字段不完全对应时，可以使用 ResultMap 来定义字段与实体类属性之间的映射关系。
 
-```javascript
- <resultMap id="UserResultMap" type="com.example.model.User">
-  <result property="id" column="user_id"/>
-  <result property="name" column="username"/>
-  <result property="email" column="user_email"/>
- </resultMap>
+[comment]: <> (```javascript)
 
- <select id="selectUser" resultMap="UserResultMap">
-  SELECT user_id AS id, username AS name, user_email AS email FROM users WHERE id = #{id}
- </select>
-```
+[comment]: <> ( <resultMap id="UserResultMap" type="com.example.model.User">)
+
+[comment]: <> (  <result property="id" column="user_id"/>)
+
+[comment]: <> (  <result property="name" column="username"/>)
+
+[comment]: <> (  <result property="email" column="user_email"/>)
+
+[comment]: <> ( </resultMap>)
+
+[comment]: <> ( <select id="selectUser" resultMap="UserResultMap">)
+
+[comment]: <> (  SELECT user_id AS id, username AS name, user_email AS email FROM users WHERE id = #{id})
+
+[comment]: <> ( </select>)
+
+[comment]: <> (```)
 
 ## MyBatis 一级缓存与二级缓存
 
