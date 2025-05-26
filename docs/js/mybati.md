@@ -70,7 +70,7 @@ INSERT INTO users (name, email) VALUES (#{name}, #{email})
 :::
 ### 2.使用 @Param注解
 
-```javascript
+```java
 public interface UserMapper {
 User selectUserByNameAndEmail(@Param("name") String name, @Param("email") String email);
 }
@@ -78,10 +78,10 @@ User selectUserByNameAndEmail(@Param("name") String name, @Param("email") String
 
 ### 3.使用 Map装载
 
-```javascript
-public interface UserMapper {
-    User selectUserByParams(Map<String, Object> params);
-}
+```java
+ public interface UserMapper {
+     User selectUserByParams(Map<String, Object> params);
+ }
 ```
 ```javascript
 <select id="selectUserByParams" parameterType="map" resultType="User">
@@ -129,8 +129,6 @@ MyBatis 中，不同 XML 文件中的 ID **可以重复**，
 :::
 
 ```javascript
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.mapper.UserMapper">
   <select id="selectUser" parameterType="int" resultType="com.example.model.User">
     SELECT * FROM users WHERE id = #{id}
