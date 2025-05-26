@@ -22,13 +22,37 @@ export const zhSidebar = {
                     link: 'JVM'
                 },
                 {
-                    text: '变量',
-                    link: 'var'
+                    text: 'java基础',
+                    link: 'java基础'
                 },
                 {
-                    text: '运算符',
-                    link: 'operator'
+                    text: 'date_base',
+                    link: 'date_base'
                 },
+                {
+                    text: 'mq',
+                    link: 'mq'
+                },
+                {
+                    text: 'mybatis',
+                    link: 'mybatis'
+                },
+                {
+                    text: 'python',
+                    link: 'python'
+                },
+                {
+                    text: 'redis',
+                    link: 'redis'
+                },
+                // {
+                //     text: '变量',
+                //     link: 'var'
+                // },
+                // {
+                //     text: '运算符',
+                //     link: 'operator'
+                // },
                 // {
                 //     text: '数据类型',
                 //     link: 'dataType'
