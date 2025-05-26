@@ -33,10 +33,10 @@ export const zhSidebar = {
                     text: 'mq',
                     link: 'mq'
                 },
-                {
-                    text: 'mybatis',
-                    link: 'mybatis'
-                },
+                // {
+                //     text: 'mybatis',
+                //     link: 'mybatis'
+                // },
                 {
                     text: 'python',
                     link: 'python'
