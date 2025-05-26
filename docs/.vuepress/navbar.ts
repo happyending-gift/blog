@@ -35,8 +35,11 @@ export const zhNavbar = [
             ],
     },
     {
-        text: '标签',
-        link: '/tag/',
+        text: '视频',
+        children:
+            [
+                { text: 'AImodel', link: 'https://www.bilibili.com/video/BV1BuoqYDE4s/?spm_id_from=333.337.search-card.all.click&vd_source=dfd89b4ec8cf2c897e32e3e3342bb775' },
+            ]
     },
     {
         text: '分类',
