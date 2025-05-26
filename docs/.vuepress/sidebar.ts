@@ -29,10 +29,10 @@ export const zhSidebar = {
                     text: '运算符',
                     link: 'operator'
                 },
-                {
-                    text: '数据类型',
-                    link: 'dataType'
-                },
+                // {
+                //     text: '数据类型',
+                //     link: 'dataType'
+                // },
 
             ],
         }
