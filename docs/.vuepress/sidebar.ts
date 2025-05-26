@@ -23,15 +23,15 @@ export const zhSidebar = {
                 },
                 {
                     text: 'java基础',
-                    link: 'java基础'
+                    link: 'javabase'
                 },
                 {
                     text: 'date_base',
-                    link: 'date_base'
+                    link: 'datebase'
                 },
                 {
                     text: 'mq',
-                    link: 'mq'
+                    link: 'mq1'
                 },
                 // {
                 //     text: 'mybatis',
@@ -39,11 +39,11 @@ export const zhSidebar = {
                 // },
                 {
                     text: 'python',
-                    link: 'python'
+                    link: 'python1'
                 },
                 {
                     text: 'redis',
-                    link: 'redis'
+                    link: 'redis1'
                 },
                 // {
                 //     text: '变量',

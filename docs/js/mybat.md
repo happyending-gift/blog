@@ -1,5 +1,5 @@
 ---
-title: mybatis
+title: mybat
 author: chengp
 ---
 
