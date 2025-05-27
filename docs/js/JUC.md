@@ -196,6 +196,22 @@ ThreadLocalMap 的 key 是弱引用，而 value 是强引用。
     
   强引用保证数据完整性：使用强引用作为 ThreadLocalMap的值确保了只要ThreadLocal对象存在，其关联的数据值也会一直存在，直到显式地通过remove()方法或线程结束时清理。这样可以保证数据的完整性和一致性，避免因垃圾回收导致的潜在错误。
 
+## 线程池任务提交及执行流程
+
+当向线程池提交一个新任务时，具体的执行流程如下：
+
+1. **创建线程执行任务**：
+    - 线程池会根据 corePoolSize（核心线程数）的大小创建相应数量的线程来执行任务。
+
+2. **任务进入阻塞队列**：
+    - 当任务数量超过 corePoolSize 后，后续的任务将进入阻塞队列（work queue）。
+
+3. **创建额外线程**：
+    - 如果阻塞队列也满了，线程池将继续创建 (maximumPoolSize - corePoolSize) 个数量的线程来执行任务。
+    - 任务处理完成后，这些额外创建的线程在等待 keepAliveTime 时间后将被自动销毁。
+
+4. **达到最大线程数**：
+    - 如果达到 maximumPoolSize，且阻塞队列仍然满，则根据不同的拒绝策略进行处理。
 
 
 
@@ -272,3 +288,45 @@ threadlocal中set的值，同时只能存在一个，后面set的值，会把前
 
 3：通过trylock,为不同线程设置不同的资源申请时间。
 :::
+
+## 手撕sychronized死锁
+
+``` java
+public class SyncDeadlock {
+public static Object lock1 = new Object();
+public static Object lock2 = new Object();
+
+    public static void main(String[] args) {
+        Thread t1 = new Thread(() -> {
+            synchronized (lock1) {
+                System.out.println("Thread 1 locked lock1");
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                synchronized (lock2) {
+                    System.out.println("Thread 1 locked lock2");
+                }
+            }
+        });
+
+        Thread t2 = new Thread(() -> {
+            synchronized (lock2) {
+                System.out.println("Thread 2 locked lock2");
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                synchronized (lock1) {
+                    System.out.println("Thread 2 locked lock1");
+                }
+            }
+        });
+
+        t1.start();
+        t2.start();
+    }
+}
+```

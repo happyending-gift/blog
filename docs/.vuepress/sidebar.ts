@@ -15,7 +15,7 @@ export const zhSidebar = {
                 },
                 {
                     text: '小提示',
-                    link: 'tag'
+                    link: 'tip'
                 },
                 {
                     text: '虚拟机',
