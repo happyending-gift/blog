@@ -68,29 +68,36 @@ footer: MIT Licensed | Copyright © 2025-present chengp
 </div>
 
 <script>
-// 获取模态框
-var modal = document.getElementById("wechat-modal");
+if (typeof document !== 'undefined') {
+  document.addEventListener('DOMContentLoaded', function() {
+    // 获取模态框
+    var modal = document.getElementById("wechat-modal");
 
-// 获取打开模态框的按钮
-var btn = document.getElementById("show-wechat-qr");
+    // 获取打开模态框的按钮
+    var btn = document.getElementById("show-wechat-qr");
 
-// 获取关闭模态框的 span 元素
-var span = document.getElementById("hide-wechat-qr");
+    // 获取关闭模态框的 span 元素
+    var span = document.getElementById("hide-wechat-qr");
 
-// 当用户点击按钮时，打开模态框
-btn.onclick = function() {
-  modal.style.display = "block";
-}
+    // 检查元素是否存在
+    if (modal && btn && span) {
+      // 当用户点击按钮时，打开模态框
+      btn.onclick = function() {
+        modal.style.display = "block";
+      }
 
-// 当用户点击 (x) 或模态框外部时关闭模态框
-span.onclick = function() {
-  modal.style.display = "none";
-}
+      // 当用户点击 (x) 或模态框外部时关闭模态框
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
 
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    }
+  });
 }
 </script>
 
