@@ -18,6 +18,12 @@ actions:
     link: /js/
     type: primary
 
+::: wechat-button
+<template>
+<WeChatButton wechatId="你的微信号" />
+</template>
+:::
+
 footer: MIT Licensed | Copyright © 2025-present chengp
 ---
 
@@ -43,8 +49,3 @@ footer: MIT Licensed | Copyright © 2025-present chengp
 - [163邮箱](mailto:13217958672@163.com)
 
 
-::: custom-component
-<template>
-<WeChatButton wechatId="13217958672" />
-</template>
-:::
