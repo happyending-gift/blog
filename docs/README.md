@@ -45,6 +45,53 @@ footer: MIT Licensed | Copyright © 2025-present chengp
 - [163邮箱](mailto:13217958672@163.com)
 
 
-<a href="weixin://" data-path="添加好友" data-username="13217958672">添加微信</a>
+<button id="show-wechat-qr" style="background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;">显示微信二维码</button>
+
+<!-- 微信二维码模态框 -->
+<div id="wechat-modal" style="display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.4);">
+  <!-- 模态框内容 -->
+  <div style="background-color: #fefefe; margin: 15% auto; padding: 20px; border: 1px solid #888; width: 80%; max-width: 300px; text-align: center; position: relative;">
+    <span id="hide-wechat-qr" style="color: #aaa; position: absolute; top: 10px; right: 10px; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
+    <p>我的微信二维码</p>
+    <img src="/wechat.jpg" alt="微信二维码" style="max-width: 100%; height: auto;">
+  </div>
+</div>
+
+<script>
+// 获取模态框
+var modal = document.getElementById("wechat-modal");
+
+// 获取打开模态框的按钮
+var btn = document.getElementById("show-wechat-qr");
+
+// 获取关闭模态框的 span 元素
+var span = document.getElementById("hide-wechat-qr");
+
+// 当用户点击按钮时，打开模态框
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// 当用户点击 (x) 或模态框外部时关闭模态框
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
 
 
