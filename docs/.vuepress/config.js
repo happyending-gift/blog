@@ -30,7 +30,7 @@ export default defineUserConfig({
     logo: 'comet.png',
     //logo:'/comet.png',文件放在public根目录下，也可以
 
-    repo: 'https://gitee.com/passwordgloo/vuepress2-tutorial',
+    //repo: 'https://gitee.com/passwordgloo/vuepress2-tutorial',
 
     locales: {
       '/': {
