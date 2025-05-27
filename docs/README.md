@@ -4,7 +4,7 @@ heroImage: /comet.png
 heroText: 小陈文档
 tagline: 繁星似海 熠熠生辉
 actions:
-  - text: 基础思考
+  - text: java后端
     link: /js/
     type: primary
     
@@ -14,6 +14,9 @@ actions:
   - text: 关于
     link: about.md
     type: success
+  - text: java
+    link: /js/
+    type: primary
 
 footer: MIT Licensed | Copyright © 2025-present chengp
 ---
