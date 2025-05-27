@@ -27,7 +27,7 @@ footer: MIT Licensed | Copyright © 2025-present chengp
   <button type="button" class="relative w-full cursor-default rounded-md bg-white py-1.5 pl-3 pr-10 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 sm:text-sm sm:leading-6" aria-haspopup="listbox" aria-expanded="true" aria-labelledby="listbox-label">
     <span class="flex items-center">
       <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="h-5 w-5 flex-shrink-0 rounded-full">
-      <span class="ml-3 block truncate">chengp</span>
+      <span class="ml-3 block truncate">陈国鹏  24   江西南昌    南昌大学    计算机技术</span>
     </span>
     <span class="pointer-events-none absolute inset-y-0 right-0 ml-3 flex items-center pr-2">
       <svg class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
