@@ -45,3 +45,9 @@ footer: MIT Licensed | Copyright © 2025-present chengp
 - [163邮箱](mailto:13217958672@163.com)
 
 
+actions:
+- text: 微信
+  link: /js/
+  type: primary
+
+
