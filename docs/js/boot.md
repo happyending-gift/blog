@@ -3,6 +3,22 @@ title: springboot
 author: chengp
 ---
 
+
+
+## Spring IoC 容器构建
+
+- 获取一个新的 bean 工厂：通常是 ApplicationContext
+
+- 加载和解析 spring 的配置，解析 bean 对象，将解析到的 bean 封装成 BeanDefinition，并放到本地缓存中
+
+- 实例化和调用 BeanFactoryPostProcessor (BeanDefinitionRegistryPostProcessor) 的扩展方法，这边是一个非常重要的扩展点
+
+- 实例化 BeanPostProcessor，加载到 BeanFactory 中，但是这边还不触发，该扩展接口的方法在 bean 对象执行初始化方法前后被触发，这边是另一个重要扩展点
+
+- 实例化所有剩余的 bean 实例（非懒加载），包括：创建 bean 实例、bean 实例属性填充、bean 实例的初始化
+
+- 完成容器刷新，推送上下文刷新完毕事件（ContextRefreshedEvent）到监听器
+
 ## Spring Boot 与 Spring MVC 的区别
 
 Spring Boot 和 Spring MVC 都是 Spring 家族中的重要成员，但它们的定位和用途有所不同。
