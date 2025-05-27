@@ -45,6 +45,6 @@ footer: MIT Licensed | Copyright © 2025-present chengp
 
 ::: custom-component
 <template>
-<WeChatButton wechatId="你的微信号" />
+<WeChatButton wechatId="13217958672" />
 </template>
 :::
