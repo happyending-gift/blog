@@ -18,11 +18,7 @@ actions:
     link: /js/
     type: primary
 
-::: wechat-button
-<template>
-<WeChatButton wechatId="你的微信号" />
-</template>
-:::
+
 
 footer: MIT Licensed | Copyright © 2025-present chengp
 ---
