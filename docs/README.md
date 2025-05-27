@@ -55,7 +55,7 @@ footer: MIT Licensed | Copyright © 2025-present chengp
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-  border-radius: 5px;">显示微信二维码</button>
+  border-radius: 5px;">微信二维码</button>
 
 <!-- 微信二维码模态框 -->
 <div id="wechat-modal" style="display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.4);">
@@ -69,7 +69,9 @@ footer: MIT Licensed | Copyright © 2025-present chengp
 
 <script>
 if (typeof document !== 'undefined') {
+  console.log('脚本在浏览器环境中运行。');
   document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOMContentLoaded 事件已触发。');
     // 获取模态框
     var modal = document.getElementById("wechat-modal");
 
@@ -79,23 +81,31 @@ if (typeof document !== 'undefined') {
     // 获取关闭模态框的 span 元素
     var span = document.getElementById("hide-wechat-qr");
 
+    console.log('获取到的元素：', { modal: !!modal, btn: !!btn, span: !!span });
+
     // 检查元素是否存在
     if (modal && btn && span) {
+      console.log('已找到所有元素，添加事件监听器。');
       // 当用户点击按钮时，打开模态框
       btn.onclick = function() {
+        console.log('按钮点击，尝试显示模态框。');
         modal.style.display = "block";
       }
 
       // 当用户点击 (x) 或模态框外部时关闭模态框
       span.onclick = function() {
+         console.log('关闭按钮点击，尝试隐藏模态框。');
         modal.style.display = "none";
       }
 
       window.onclick = function(event) {
         if (event.target == modal) {
+          console.log('模态框外部点击，尝试隐藏模态框。');
           modal.style.display = "none";
         }
       }
+    } else {
+        console.error('未找到必需的元素，无法添加事件监听器。', { modal: modal, btn: btn, span: span });
     }
   });
 }
