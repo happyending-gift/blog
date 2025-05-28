@@ -40,22 +40,22 @@ npm install 命令用途：
 
 
 ## docker有关指令
-| 命令            | 说明                           | 文档地址                  |
+| 命令            | 说明                           | 指令                  |
 |-----------------|--------------------------------|---------------------------|
-| docker pull     | 拉取镜像                       | [docker pull](docker pull)  |
-| docker push     | 推送镜像到DockerRegistry       | [docker push](docker push)  |
-| docker images   | 查看本地镜像                   | [docker images](docker images) |
-| docker rmi      | 删除本地镜像                   | [docker rmi](docker rmi)    |
-| docker run      | 创建并运行容器（不能重复创建）  | [docker run](docker run)    |
-| docker stop     | 停止指定容器                   | [docker stop](docker stop)   |
-| docker start    | 启动指定容器                   | [docker start](docker start) |
-| docker restart  | 重新启动容器                   | [docker restart](docker restart) |
-| docker rm       | 删除指定容器                   | [docs.docker.com](docs.docker.com) |
-| docker ps       | 查看容器                       | [docker ps](docker ps)      |
-| docker logs     | 查看容器运行日志               | [docker logs](docker logs)   |
-| docker exec     | 进入容器                       | [docker exec](docker exec)  |
-| docker save     | 保存镜像到本地压缩文件         | [docker save](docker save)  |
-| docker load     | 加载本地压缩文件到镜像         | [docker load](docker load)  |
+| docker pull     | 拉取镜像                       | docker pull  |
+| docker push     | 推送镜像到DockerRegistry       | docker push  |
+| docker images   | 查看本地镜像                   | docker images |
+| docker rmi      | 删除本地镜像                   | docker rmi    |
+| docker run      | 创建并运行容器（不能重复创建）  | docker run    |
+| docker stop     | 停止指定容器                   | docker stop   |
+| docker start    | 启动指定容器                   | docker start |
+| docker restart  | 重新启动容器                   | docker restart |
+| docker rm       | 删除指定容器                   | docs.docker.com |
+| docker ps       | 查看容器                       | docker ps     |
+| docker logs     | 查看容器运行日志               | docker logs   |
+| docker exec     | 进入容器                       | docker exec  |
+| docker save     | 保存镜像到本地压缩文件         | docker save  |
+| docker load     | 加载本地压缩文件到镜像         | docker load  |
 
 
 ## docker中登录mysql

@@ -47,7 +47,7 @@ export const zhSidebar = {
                 },
                 {
                     text: '前端有关指令',
-                    link: 'front-end_instruction'
+                    link: 'frontinstruction'
                 },
                 // {
                 //     text: '运算符',
