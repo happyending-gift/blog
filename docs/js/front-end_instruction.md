@@ -62,16 +62,16 @@ npm install 命令用途：
 
 进入容器
 
-```bash
+
 docker exec -it mysql bash
-```
+
 
 打开交互终端(-i 交互，-t 终端)
 
-```bash
+
 mysql -u root -p123456
 
-```
+
 
 ## conda 配置清华镜像
 
