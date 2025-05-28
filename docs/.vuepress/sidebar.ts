@@ -45,10 +45,10 @@ export const zhSidebar = {
                     text: 'redis',
                     link: 'redis1'
                 },
-                // {
-                //     text: '变量',
-                //     link: 'var'
-                // },
+                {
+                    text: '前端有关指令',
+                    link: 'front-end_instruction'
+                },
                 // {
                 //     text: '运算符',
                 //     link: 'operator'

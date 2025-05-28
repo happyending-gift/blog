@@ -43,8 +43,6 @@ footer: MIT Licensed | Copyright © 2025-present chengp
 
 - [qqmail](mailto:1787536379@qq.com)      
 - [163邮箱](mailto:13217958672@163.com)
-
-
-[微信二维码](/blog/wechat.jpg)
+- [添加好友](/blog/wechat.jpg)
 
 
