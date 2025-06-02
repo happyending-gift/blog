@@ -80,6 +80,19 @@ mysql -u root -p123456
 | conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/ | 添加清华大学镜像站点的免费包频道             |
 | conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/ | 添加清华大学镜像站点的主包频道               |
 
-::: tip 安装指定下载源
+::: tip 
+安装指定下载源
+
 install zhihuai -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+在anaconda安装pytoch
+
+pip3 install torch torchvision torchaudio
+:::
+
+
+::: tip 直接用pycharm不就可以了，一站式，全搞定
+anaconda可以管理多个环境，比如我可以创建两个conda环境，一个用来做开发，只需要Python和常见的几个库，另一个用来学习神经网络，
+
+安装pytorch以及配套的深度学习库，不用担心冲突
 :::
