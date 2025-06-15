@@ -44,9 +44,10 @@ footer: MIT Licensed | Copyright © 2025-present chengp
 - [添加好友](/blog/wechat.jpg)
 
 微信
-<WechatQrModal />
 <Test />
-
+<ClientOnly>
+<WechatQrModal />
+</ClientOnly>
 
 
 
