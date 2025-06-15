@@ -5,7 +5,7 @@ heroText: 小陈文档
 tagline: 繁星似海 熠熠生辉
 actions:
   - text: java后端
-    link: /js/JUC
+    link: /js
     type: primary
  
 
@@ -44,7 +44,7 @@ footer: MIT Licensed | Copyright © 2025-present chengp
 - [添加好友](/blog/wechat.jpg)
 
 微信
-</WechatQrModal>
+<WeChatQrModal />
 
 
 
