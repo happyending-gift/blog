@@ -44,6 +44,17 @@ footer: MIT Licensed | Copyright © 2025-present chengp
 - [添加好友](/blog/wechat.jpg)
 
 微信
-<WechatQrModal />
+<template>
+<WechatQrModal></WechatQrModal>
+</template>
 
 
+
+import WechatQrModel from './components/WechatQrModel.vue'
+<script>
+export default {
+  components: {
+    WechatQrModel
+  }
+}
+</script>
