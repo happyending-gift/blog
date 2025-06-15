@@ -4,7 +4,7 @@ import Article from './layouts/Article.vue'
 import Category from './layouts/Category.vue'
 import Tag from './layouts/Tag.vue'
 import Timeline from './layouts/Timeline.vue'
-import WechatQrModel from './components/WechatQrModel.vue'
+import WechatQrModel from './components/WechatQrModal.vue'
 
 export default defineClientConfig({
   // we provide some blog layouts
