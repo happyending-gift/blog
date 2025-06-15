@@ -50,8 +50,9 @@ footer: MIT Licensed | Copyright © 2025-present chengp
 
 
 
-import WechatQrModel from './components/WechatQrModel.vue'
+
 <script>
+import WechatQrModel from './components/WechatQrModel.vue'
 export default {
   components: {
     WechatQrModel
