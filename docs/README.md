@@ -5,7 +5,7 @@ heroText: 小陈文档
 tagline: 繁星似海 熠熠生辉
 actions:
   - text: java后端
-    link: /js/
+    link: /js/JUC
     type: primary
     
   - text: 项目总结
