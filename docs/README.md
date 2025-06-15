@@ -45,6 +45,7 @@ footer: MIT Licensed | Copyright © 2025-present chengp
 
 微信
 <WechatQrModal />
+<Test />
 
 
 
