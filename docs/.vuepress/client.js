@@ -14,6 +14,6 @@ export default defineClientConfig({
     Category,
     Tag,
     Timeline,
-    WechatQrModal,
+   // WechatQrModal,
   },
 })
