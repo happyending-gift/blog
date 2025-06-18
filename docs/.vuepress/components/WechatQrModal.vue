@@ -1,22 +1,25 @@
 <template>
   <div>
-    <!-- 触发按钮 -->
-    <button @click="showModal" class="wechat-btn">
-      微信二维码
-    </button>
+    <!-- 触发弹窗的按钮 -->
+    <button @click="showModal" style="background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 10px 24px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 5px;">微信二维码</button>
 
-    <!-- 模态框使用v-show保持DOM稳定 -->
-    <div v-show="isVisible" class="wechat-modal" @click.self="hideModal">
+    <!-- 微信二维码模态框 -->
+    <div v-if="isVisible" class="wechat-modal" @click.self="hideModal">
+      <!-- 模态框内容 -->
       <div class="wechat-modal-content">
         <span class="close" @click="hideModal">&times;</span>
         <p>我的微信二维码</p>
-        <img
-            src="/wechat.jpg"
-            alt="微信二维码"
-            class="qrcode-img"
-            @error="handleImageError"
-        >
-        <p v-if="imageFailed" class="error-text">图片加载失败，请刷新重试</p>
+        <img src="/wechat.jpg" alt="微信二维码" style="max-width: 100%; height: auto;">
       </div>
     </div>
   </div>
@@ -26,75 +29,51 @@
 export default {
   data() {
     return {
-      isVisible: false,
-      imageFailed: false
-    }
+      isVisible: false
+    };
   },
   methods: {
     showModal() {
-      this.isVisible = true
+      this.isVisible = true;
     },
     hideModal() {
-      this.isVisible = false
-    },
-    handleImageError() {
-      this.imageFailed = true
+      this.isVisible = false;
     }
   }
-}
+};
 </script>
 
-<style scoped>
-.wechat-btn {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 10px 24px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-.wechat-btn:hover {
-  background-color: #45a049;
-}
-
+<style>
+/* 模态框背景 */
 .wechat-modal {
-  display: flex;
+  display: flex; /* 使用flexbox居中 */
   justify-content: center;
   align-items: center;
-  position: fixed;
-  z-index: 1000;
+  position: fixed; /* 固定位置 */
+  z-index: 1; /* 放在顶部 */
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.4);
+  width: 100%; /* 全屏 */
+  height: 100%; /* 全屏 */
+  overflow: auto; /* 如果需要可以滚动 */
+  background-color: rgba(0,0,0,0.4); /* 半透明黑色背景 */
 }
 
+/* 模态框内容 */
 .wechat-modal-content {
   background-color: #fefefe;
-  margin: auto;
+  margin: auto; /* flexbox和auto margin可以居中 */
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
-  max-width: 300px;
+  max-width: 300px; /* 最大宽度 */
   text-align: center;
   position: relative;
-  border-radius: 10px;
-  animation: modalopen 0.3s;
+  border-radius: 10px; /* 圆角 */
 }
 
-@keyframes modalopen {
-  from { opacity: 0; transform: scale(0.9) }
-  to { opacity: 1; transform: scale(1) }
-}
-
-.close {
+/* 关闭按钮 */
+.wechat-modal-content .close {
   color: #aaa;
   position: absolute;
   top: 10px;
@@ -103,20 +82,11 @@ export default {
   font-weight: bold;
   cursor: pointer;
 }
-.close:hover {
+
+.wechat-modal-content .close:hover,
+.wechat-modal-content .close:focus {
   color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
-
-.qrcode-img {
-  max-width: 100%;
-  height: auto;
-  border: 1px solid #ddd;
-  margin-top: 10px;
-}
-
-.error-text {
-  color: red;
-  font-size: 14px;
-  margin-top: 10px;
-}
-</style>
+</style> 

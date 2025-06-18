@@ -7,9 +7,13 @@ actions:
   - text: java后端
     link: /js/
     type: primary
+    
   - text: 项目总结
     link: /program/
     type: primary
+  - text: 关于
+    link: about.md
+    type: success
   - text: 博客
     link: https://blog.csdn.net/m0_63486540?spm=1010.2135.3001.10640
     type: primary
@@ -39,10 +43,5 @@ footer: MIT Licensed | Copyright © 2025-present chengp
 - [qqmail](mailto:1787536379@qq.com)      
 - [163邮箱](mailto:13217958672@163.com)
 - [添加好友](/blog/wechat.jpg)
-
-
-
-
-
 
 

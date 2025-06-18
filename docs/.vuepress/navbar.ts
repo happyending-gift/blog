@@ -46,6 +46,7 @@ export const zhNavbar = [
         children:
             [
                 { text: 'Go', link: 'https://www.topgoer.com/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/GMP%E5%8E%9F%E7%90%86%E4%B8%8E%E8%B0%83%E5%BA%A6.html' },
+                { text: 'easyExcel', link: 'https://hd1611756908.github.io/2024/07/02/EasyExcel(%E7%94%9F%E6%88%90Excel%E6%8A%A5%E8%A1%A8)%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/' },
             ]
     },
     {
