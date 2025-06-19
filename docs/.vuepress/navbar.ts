@@ -58,54 +58,54 @@ export const zhNavbar = [
 ]
 
 // 英文导航栏
-// export const enNavbar = [
-//     //单层
-//     {
-//         text: 'Home',
-//         link: '/en/',
-//         // 该元素将一直处于激活状态
-//         activeMatch: '/',
-//     },
-//     //两层嵌套
-//     {
-//         text: 'Language',
-//         children:
-//             [
-//                 {
-//                     text: 'Program',
-//                     children:
-//                         [
-//                             { text: 'C', link: 'https://en.cppreference.com/w/c' },
-//                             { text: 'Js', link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
-//                             { text: 'Ts', link: 'https://www.typescriptlang.org/docs/' },
-//                             { text: 'Java', link: 'https://www.w3schools.com/java/' }
-//                         ]
-//                 },
-//                 {
-//                     text: 'Mark',
-//                     children:
-//                         [
-//                             { text: 'HTML', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML' },
-//                             { text: 'Markdown', link: 'https://www.markdownguide.org/' },
-//                             { text: 'CSS', link: 'https://developer.mozilla.org/en-US/docs/Web/CSS' },
-//                             { text: 'Sass', link: 'https://sass-lang.com/documentation/' },
-//                             { text: 'Tailwindcss', link: 'https://tailwindcss.com/docs/installation/using-vite' }
-//                         ]
-//                 },
-//             ],
-//     },
-//     {
-//         text: 'Tag',
-//         link: '/en/tag/',
-//     },
-//     {
-//         text: 'Category',
-//         link: '/en/category/',
-//     },
-//     {
-//         text: 'Archive',
-//         link: '/en/article/',
-//     },
-//     // 字符串 - 页面文件路径
-//     '/en/about'
-// ]
+export const enNavbar = [
+    //单层
+    {
+        text: 'Home',
+        link: '/en/',
+        // 该元素将一直处于激活状态
+        activeMatch: '/',
+    },
+    //两层嵌套
+    {
+        text: 'Language',
+        children:
+            [
+                {
+                    text: 'Program',
+                    children:
+                        [
+                            { text: 'C', link: 'https://en.cppreference.com/w/c' },
+                            { text: 'Js', link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
+                            { text: 'Ts', link: 'https://www.typescriptlang.org/docs/' },
+                            { text: 'Java', link: 'https://www.w3schools.com/java/' }
+                        ]
+                },
+                {
+                    text: 'Mark',
+                    children:
+                        [
+                            { text: 'HTML', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML' },
+                            { text: 'Markdown', link: 'https://www.markdownguide.org/' },
+                            { text: 'CSS', link: 'https://developer.mozilla.org/en-US/docs/Web/CSS' },
+                            { text: 'Sass', link: 'https://sass-lang.com/documentation/' },
+                            { text: 'Tailwindcss', link: 'https://tailwindcss.com/docs/installation/using-vite' }
+                        ]
+                },
+            ],
+    },
+    {
+        text: 'Tag',
+        link: '/en/tag/',
+    },
+    {
+        text: 'Category',
+        link: '/en/category/',
+    },
+    {
+        text: 'Archive',
+        link: '/en/article/',
+    },
+    // 字符串 - 页面文件路径
+    '/en/about'
+ ]
