@@ -69,8 +69,8 @@ export const zhSidebar = {
             // collapsible: true,
             children: [
                 {
-                    text: '变量',
-                    link: 'var'
+                    text: 'Base64',
+                    link: 'Base64'
                 },
                 {
                     text: '运算符',
