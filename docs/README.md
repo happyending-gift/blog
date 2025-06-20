@@ -7,6 +7,9 @@ actions:
   - text: java后端
     link: /js/
     type: primary
+  - text: 工具类
+    link: /program/
+    type: primary
   - text: 博客
     link: https://blog.csdn.net/m0_63486540?spm=1010.2135.3001.10640
     type: primary
