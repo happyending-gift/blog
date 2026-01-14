@@ -1,17 +1,24 @@
 <template>
   <div>
     <!-- 触发弹窗的按钮 -->
-    <button @click="handleClick" style="background-color: #4CAF50; /* Green */
-      border: none;
-      color: white;
-      padding: 10px 24px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      border-radius: 5px;">{{ buttonText }}</button>
+    <button
+      @click="handleClick"
+      style="
+        background-color: #4caf50; /* Green */
+        border: none;
+        color: white;
+        padding: 10px 24px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+      "
+    >
+      {{ buttonText }}
+    </button>
 
     <!-- 微信二维码模态框 -->
     <div v-if="isVisible" class="wechat-modal" @click.self="hideModal">
@@ -19,7 +26,11 @@
       <div class="wechat-modal-content">
         <span class="close" @click="hideModal">&times;</span>
         <p>我的微信二维码</p>
-        <img :src="qrImage" alt="微信二维码" style="max-width: 100%; height: auto;">
+        <img
+          :src="qrImage"
+          alt="微信二维码"
+          style="max-width: 100%; height: auto"
+        />
       </div>
     </div>
   </div>
@@ -30,25 +41,25 @@ export default {
   props: {
     wechatId: {
       type: String,
-      default: ''
+      default: "",
     },
     qrImage: {
       type: String,
-      default: '/wechat.jpg'
+      default: "/wechat.jpg",
     },
     buttonText: {
       type: String,
-      default: '加微信'
-    }
+      default: "加微信",
+    },
   },
   data() {
     return {
-      isVisible: false
+      isVisible: false,
     };
   },
   methods: {
     handleClick() {
-      const id = (this.wechatId || '').trim();
+      const id = (this.wechatId || "").trim();
       if (!id) {
         this.showModal();
         return;
@@ -66,10 +77,14 @@ export default {
         if (document.hidden) onHide();
       };
 
-      document.addEventListener('visibilitychange', onVisibilityChange, { once: true });
-      window.addEventListener('pagehide', onHide, { once: true });
+      document.addEventListener("visibilitychange", onVisibilityChange, {
+        once: true,
+      });
+      window.addEventListener("pagehide", onHide, { once: true });
 
-      window.location.href = `weixin://dl/add?username=${encodeURIComponent(id)}`;
+      window.location.href = `weixin://dl/add?username=${encodeURIComponent(
+        id
+      )}`;
 
       window.setTimeout(() => {
         // 如果页面没有进入后台，基本可判定未成功唤起，回退弹窗。
@@ -83,8 +98,8 @@ export default {
     },
     hideModal() {
       this.isVisible = false;
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -101,7 +116,7 @@ export default {
   width: 100%; /* 全屏 */
   height: 100%; /* 全屏 */
   overflow: auto; /* 如果需要可以滚动 */
-  background-color: rgba(0,0,0,0.4); /* 半透明黑色背景 */
+  background-color: rgba(0, 0, 0, 0.4); /* 半透明黑色背景 */
 }
 
 /* 模态框内容 */
